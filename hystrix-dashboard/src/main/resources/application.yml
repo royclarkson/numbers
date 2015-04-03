@@ -1,0 +1,10 @@
+info:
+  component: Hystrix Dashboard
+
+server:
+  port: 7979
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.boot: DEBUG

@@ -1,0 +1,15 @@
+spring:
+  profiles: default
+  application:
+    name: NumbersService
+
+server:
+  port: 0  # Spring Boot randomly assigns a port number
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
