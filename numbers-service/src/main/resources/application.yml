@@ -1,15 +1,21 @@
 spring:
-  profiles: default
   application:
-    name: NumbersService
+    name: ${vcap.application.name:numbers-service}
 
 server:
   port: 0  # Spring Boot randomly assigns a port number
 
 eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
   instance:
+    leaseRenewalIntervalInSeconds: 5
+    hostname: ${vcap.application.uris[0]:localhost}
+    nonSecurePort: 80
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+logging:
+  level:
+    ROOT: INFO
+    # org.springframework.boot: DEBUG
+    org.springframework.cloud: DEBUG
+    io.pivotal.springcloud: DEBUG

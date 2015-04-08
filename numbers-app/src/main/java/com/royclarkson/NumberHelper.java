@@ -29,7 +29,7 @@ public class NumberHelper {
 
 	@HystrixCommand(fallbackMethod = "getDefaultNumber")
 	public Number getNumber() {
-		NumberMessage numberMessage = rest.getForObject("http://NumbersService/number", NumberMessage.class);
+		NumberMessage numberMessage = rest.getForObject("http://numbers-service/number", NumberMessage.class);
 		return numberMessage.getNumber();
 	}
 
