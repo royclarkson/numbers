@@ -1,9 +1,0 @@
----
-applications:
-- name: numbers-service
-  memory: 1024M
-  instances: 3
-  host: numbers-service
-  domain: lion.wild.cf-app.com
-  services:
-  - service-registry
