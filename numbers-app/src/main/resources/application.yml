@@ -6,7 +6,6 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 5
     hostname: ${vcap.application.uris[0]:localhost}
-    nonSecurePort: 80
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
@@ -16,3 +15,11 @@ logging:
     # org.springframework.boot: DEBUG
     org.springframework.cloud: DEBUG
     io.pivotal.springcloud: DEBUG
+
+---
+spring:
+  profiles: cloud
+
+eureka:
+  instance:
+    nonSecurePort: 80

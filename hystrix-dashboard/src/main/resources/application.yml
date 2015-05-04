@@ -4,7 +4,11 @@ info:
 server:
   port: 7979
 
+hystrix:
+  dashboard: 
+    enableIgnoreConnectionCloseHeader: true
+
 logging:
   level:
     ROOT: INFO
-    org.springframework.boot: DEBUG
+    org.springframework.cloud: DEBUG
