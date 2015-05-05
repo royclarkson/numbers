@@ -15,6 +15,8 @@
  */
 package com.royclarkson;
 
+import com.netflix.discovery.EurekaClientConfig;
+
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.cloud.netflix.hystrix.amqp.HystrixConnectionFactory;
 import org.springframework.cloud.pivotal.config.java.CloudConnectorsConfig;
@@ -30,6 +32,11 @@ public class CloudConfig extends CloudConnectorsConfig {
 	@HystrixConnectionFactory
 	public ConnectionFactory hystrixConnectionFactory() {
 		return connectionFactory().hystrixConnectionFactory();
+	}
+
+	@Bean
+	public EurekaClientConfig eurekaClientConfig() {
+		return connectionFactory().eurekaClientConfig();
 	}
 
 }
