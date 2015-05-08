@@ -14,6 +14,7 @@ cf push numbers-service -p numbers-service/target/numbers-service-0.1.0.jar
 
 cf bind-service numbers service-registry
 cf bind-service numbers circuit-breaker-dashboard
+cf bind-service numbers config-server
 cf bind-service numbers-service service-registry
 
 # restage apps to confirm bindings

@@ -18,6 +18,7 @@ package com.royclarkson;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestOperations;
 
@@ -27,6 +28,9 @@ public class NumberHelper {
 	@Autowired
 	RestOperations rest;
 
+	@Value("${defaultNumber:0}")
+	private Long defaultNumber;
+
 	@HystrixCommand(fallbackMethod = "getDefaultNumber")
 	public Number getNumber() {
 		NumberMessage numberMessage = rest.getForObject("http://numbers-service/number", NumberMessage.class);
@@ -34,7 +38,7 @@ public class NumberHelper {
 	}
 
 	public Number getDefaultNumber() {
-		return Long.MIN_VALUE;
+		return this.defaultNumber;
 	}
 
 }
