@@ -19,20 +19,12 @@ public class NumberMessage {
 
 	private Number number;
 
-	public Number getNumber() {
-		return number;
-	}
-
-	public void setNumber(Number number) {
-		this.number = number;
-	}
-
-	public NumberMessage() { 
-
-	}
-
 	public NumberMessage(Number number) {
 		this.number = number;
+	}
+
+	public Number getNumber() {
+		return number;
 	}
 
 }
