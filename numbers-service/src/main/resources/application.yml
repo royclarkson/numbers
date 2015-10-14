@@ -2,27 +2,12 @@ spring:
   application:
     name: ${vcap.application.name:numbers-service}
 
-server:
-  port: 0  # Spring Boot randomly assigns a port number
-
-eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 5
-    hostname: ${vcap.application.uris[0]:localhost}
-    metadataMap:
-      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+security:
+  basic:
+    enabled: false
 
 logging:
   level:
     ROOT: INFO
-    # org.springframework.boot: DEBUG
     org.springframework.cloud: DEBUG
     io.pivotal.springcloud: DEBUG
-
----
-spring:
-  profiles: cloud
-
-eureka:
-  instance:
-    nonSecurePort: 80
