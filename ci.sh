@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 cd eureka-server/
 mvn clean package
 
