@@ -60,23 +60,17 @@
 
 	<repositories>
 		<repository>
-			<id>spring-snapshots</id>
-			<name>Spring Snapshots</name>
+			<id>spring-repository</id>
+			<name>Spring Repository</name>
 			<url>https://repo.spring.io/libs-release</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
 		</repository>
 	</repositories>
 
 	<pluginRepositories>
 		<pluginRepository>
-			<id>spring-snapshots</id>
-			<name>Spring Snapshots</name>
+			<id>spring-repository</id>
+			<name>Spring Repository</name>
 			<url>https://repo.spring.io/libs-release</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
 
