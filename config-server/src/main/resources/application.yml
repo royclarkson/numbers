@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/royclarkson/sample-external-configuration.git
+
+server:
+  port: 8888
