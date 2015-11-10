@@ -2,7 +2,10 @@
 
 set -e
 
-cd eureka-server/
+cd config-server
+mvn clean package
+
+cd ../eureka-server/
 mvn clean package
 
 cd ../hystrix-dashboard/
