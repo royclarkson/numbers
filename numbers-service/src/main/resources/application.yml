@@ -1,6 +1,9 @@
 spring:
   application:
-    name: ${vcap.application.name:numbers-service}
+    name: numbers-service
+
+server:
+  port: 0
 
 security:
   basic:
