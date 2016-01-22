@@ -1,0 +1,9 @@
+---
+instances: 1
+memory: 512M
+applications:
+- name: numbers-service
+  host: numbers-service
+  path: target/numbers-service-0.1.0.jar
+  services:
+  - service-registry
