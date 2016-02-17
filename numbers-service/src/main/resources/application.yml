@@ -14,3 +14,9 @@ logging:
     ROOT: INFO
     org.springframework.cloud: DEBUG
     io.pivotal.springcloud: DEBUG
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
