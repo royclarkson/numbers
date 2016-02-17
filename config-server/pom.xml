@@ -56,6 +56,11 @@
 
 	<pluginRepositories>
 		<pluginRepository>
+			<id>spring-plugins</id>
+			<name>Spring Plugins Repository</name>
+			<url>https://repo.spring.io/plugins-release</url>
+		</pluginRepository>
+		<pluginRepository>
 			<id>spring-repository</id>
 			<name>Spring Repository</name>
 			<url>https://repo.spring.io/libs-release</url>
