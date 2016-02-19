@@ -1,2 +1,70 @@
-spring-cloud-netflix-samples
-============================
+= spring-cloud-netflix-samples
+
+A collection of sample apps that demonstrate the use of Eureka, Config Server, and Hystrix Dashboard within a Spring Cloud architecture.
+
+== Eureka Server
+
+Eureka is used as a service registry. Each of the applications in this example will register with the Eureka server.
+
+Build and run the Eureka Server:
+
+----
+cd eureka-server
+mvn spring-boot:run
+----
+
+The Eureka server is running at http://locahost:8761
+
+== Config Server
+
+The config server demonstrates the use of external configuration. In this case the default number for the numbers-service is configured in a github repository.
+
+In a new terminal window, build and run the Config Server:
+
+----
+cd config-server
+mvn spring-boot:run
+----
+
+The config server is running at http://localhost:8888
+
+== Hystrix Dashboard
+
+The Hystrix dashboard displays the status and health of the requests to the numbers service. The numbers service and app must be running before the hystrix stream is available for display.
+
+In a new terminal window, build and run the Hystrix Dashboard:
+
+----
+cd hystrix-dashboard
+mvn spring-boot:run
+----
+
+Open the Hystrix dashboard at http://localhost:7979/hystrix
+
+== Numbers Service
+
+The numbers service provides a single REST endpoint at `http://numbers-service/number`, which returns an incremented number each time it receives a GET request.
+
+In a new terminal window, build and run the Numbers Service:
+
+----
+cd numbers-service
+mvn spring-boot:run
+----
+
+The numbers service is configured to start on a random port so that you may run multiple instances of the service.
+
+== Numbers App
+
+The numbers app is the main "UI" for the application. Eureka tells the numbers app where to find the numbers service. The numbers app then makes a request to the numbers service for the next number.
+
+----
+cd numbers-app
+mvn spring-boot:run
+----
+
+Make multiple requests to the app to retrieve an incremented number:
+
+----
+while true; do curl -k http://localhost:8080/; echo; sleep .1; done
+----
