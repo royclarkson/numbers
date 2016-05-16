@@ -19,16 +19,14 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestOperations;
+import org.springframework.web.client.RestTemplate;
 
 @Component
 public class NumberHelper {
 
 	@Autowired
-	@LoadBalanced
-	RestOperations rest;
+	RestTemplate rest;
 
 	@Value("${defaultNumber:0}")
 	private Long defaultNumber;

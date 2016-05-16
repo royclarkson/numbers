@@ -1,5 +1,5 @@
 ---
-instances: 1
+instances: 2
 memory: 512M
 applications:
 - name: numbers-service

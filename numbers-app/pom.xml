@@ -13,7 +13,7 @@
 	<parent>
 		<groupId>io.pivotal.spring.cloud</groupId>
 		<artifactId>spring-cloud-services-starter-parent</artifactId>
-		<version>1.0.2.RELEASE</version>
+		<version>1.1.0.M4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -57,9 +57,9 @@
 
 	<repositories>
 		<repository>
-			<id>spring-repository</id>
-			<name>Spring Repository</name>
-			<url>https://repo.spring.io/libs-release</url>
+			<id>spring-milestone</id>
+			<name>Spring Milestone Repository</name>
+			<url>https://repo.spring.io/libs-milestone</url>
 		</repository>
 	</repositories>
 
