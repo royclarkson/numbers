@@ -1,6 +1,6 @@
-= spring-cloud-netflix-samples
+= Numbers
 
-A collection of sample apps that demonstrate the use of Eureka, Config Server, and Hystrix Dashboard within a Spring Cloud architecture.
+Numbers is a sample application that demonstrates the use of Spring Cloud.
 
 == Eureka Server
 
