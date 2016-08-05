@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/royclarkson/sample-external-configuration.git
+          uri: https://github.com/royclarkson/numbers-config.git
 
 server:
   port: 8888
