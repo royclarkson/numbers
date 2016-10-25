@@ -2,12 +2,16 @@ spring:
   application:
     name: numbers-service
 
-server:
-  port: 0
-
 security:
   basic:
     enabled: false
+
+---
+spring:
+    profiles: local
+
+server:
+  port: 0
 
 eureka:
   instance:
