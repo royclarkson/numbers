@@ -1,0 +1,16 @@
+---
+instances: 1
+memory: 1G
+applications:
+- name: numbers-service
+  host: numbers-service
+  path: numbers-service/target/numbers-service-0.1.0.jar
+  services:
+  - service-registry
+- name: numbers
+  host: numbers
+  path: numbers-app/target/numbers-0.1.0.jar
+  services:
+  - config-server
+  - service-registry
+  - circuit-breaker-dashboard
