@@ -6,6 +6,12 @@ security:
   basic:
     enabled: false
 
+endpoints:
+  env:
+    sensitive: false
+  configprops:
+    sensitive: false
+
 ---
 spring:
     profiles: local

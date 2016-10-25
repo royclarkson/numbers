@@ -9,3 +9,5 @@ security:
 endpoints:
   env:
     sensitive: false
+  configprops:
+    sensitive: false
